@@ -1,0 +1,58 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: "John Doe",
+    review: "Best pizza I’ve ever had! Delivery was super fast.",
+    img: "/images/customer1.jpg",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Sarah Parker",
+    review: "Loved the chicken burger, so crispy and tasty!",
+    img: "/images/customer2.jpg",
+    rating: 4,
+  },
+  {
+    id: 3,
+    name: "Michael Smith",
+    review: "The fries were golden and fresh, exactly how I like them.",
+    img: "/images/customer3.jpg",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Emma Wilson",
+    review: "Customer support was polite & delivery right on time.",
+    img: "/images/customer4.jpg",
+    rating: 4,
+  },
+  {
+    id: 5,
+    name: "James Brown",
+    review: "Affordable prices and amazing quality food!",
+    img: "/images/customer5.jpg",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Sophia Taylor",
+    review: "Their BBQ chicken pizza is a must-try. Absolutely delicious.",
+    img: "/images/customer6.jpg",
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: "David Johnson",
+    review: "Fast delivery even on a rainy day. Respect!",
+    img: "/images/customer7.jpg",
+    rating: 4,
+  },
+  {
+    id: 8,
+    name: "Olivia Martinez",
+    review: "Desserts are heavenly, that lava cake stole my heart.",
+    img: "/images/customer8.jpg",
+    rating: 5,
+  },
+];
