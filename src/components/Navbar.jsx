@@ -46,13 +46,13 @@ const Navbar = () => {
 
         {/* Mobile Nav */}
         <div
-          className={`fixed top-0 right-0 h-full w-[90vw] bg-white/90 backdrop-blur-md z-50 transition-transform duration-300 flex flex-col ${
+          className={`fixed top-0 right-0 h-screen w-[90vw] bg-white z-[90] transition-transform duration-300   ${
             mobileOpen
               ? 'translate-x-0'
               : 'translate-x-full'
-          } items-center justify-center`}
+          }`}
         >
-          <ul className="flex flex-col gap-8 text-gray-900 font-poppins font-semibold text-xl items-center justify-center h-full">
+          <ul className="flex flex-col gap-8  text-gray-900 font-poppins font-semibold text-xl items-center justify-center h-full">
             {navLinks.map((link) => (
               <li
                 key={link}
