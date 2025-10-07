@@ -14,12 +14,10 @@
 } */
 
 
-@import "tailwindcss";
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@100..900&display=swap");
-@import "tailwindcss";
 
-/*=============== THEME ===============*/
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@100..900&display=swap");
+
 @theme {
   --color-primary: hsl(353, 93%, 50%);
   --color-primary-alt: hsl(353, 93%, 46%);
@@ -30,14 +28,9 @@
   --color-light: hsl(24, 86%, 90%);
   --color-body: hsl(24, 86%, 88%);
   --color-container: hsl(24, 86%, 92%);
-  
-  
-  --shadow-small-img: 0 4px 16px hsla(353, 100%, 8%, .2);
-  --shadow-big-img: 0 8px 24px hsla(353, 100%, 8%, .2);
-
+  --shadow-small-img: 0 4px 16px hsla(353, 100%, 8%, .18);
+  --shadow-big-img: 0 8px 32px hsla(353, 100%, 8%, .18);
   --font-body: "Montserrat", sans-serif;
   --font-heading: "Carter One", system-ui;
-
   --height-header: 3.5rem;
 }
-
