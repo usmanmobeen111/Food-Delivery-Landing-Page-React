@@ -86,6 +86,7 @@ const Features = () => {
             variants={underlineVariants}
             initial="hidden"
             animate="visible"
+            
           />
         </h2>
         <p className="text-gray-600 mt-6 max-w-2xl mx-auto font-poppins">
