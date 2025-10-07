@@ -1,29 +1,32 @@
-import React, { useState } from 'react';
-import { FaHamburger } from 'react-icons/fa';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { useState, useEffect } from "react";
+import { FaHamburger } from "react-icons/fa";
+import { FiMenu, FiX } from "react-icons/fi";
 
-const navLinks = [
-  'Home',
-  'Features',
-  'Menu',
-  'Testimonials',
-  'CTA',
-];
+const navLinks = ["Home", "Features", "Menu", "Testimonials", "CTA"];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [mobileOpen]);
+
   return (
-    <div>
-      <nav className="flex justify-between items-center p-4 w-full shadow-md px-10 z-50 bg-transparent backdrop-blur-lg">
+    <header className="fixed top-0 left-0 w-full z-50">
+      <nav className="flex justify-between items-center p-4 px-8 md:px-10 shadow-md bg-transparent backdrop-blur-lg relative">
         {/* Logo */}
         <div className="flex items-center gap-2 text-gray-900 text-2xl font-bold font-roboto">
-          <FaHamburger className="w-10 h-10 text-primary" />
+          <FaHamburger className="w-9 h-9 text-primary" />
           <span>Grill & Chill</span>
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex justify-center items-center gap-8 text-gray-700 font-poppins font-semibold text-lg">
+        <ul className="hidden md:flex justify-center items-center gap-8 text-gray-900 font-poppins font-semibold text-lg">
           {navLinks.map((link) => (
             <li
               key={link}
@@ -37,22 +40,28 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-3xl text-gray-900 z-[100] cursor-pointer"
+          className="md:hidden text-3xl text-gray-900 z-[110] cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
           {mobileOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        {/* Mobile Nav */}
+        {/* Mobile Nav Overlay */}
         <div
-          className={`fixed top-0 right-0 h-screen w-[90vw] bg-white z-[90] transition-transform duration-300   ${
-            mobileOpen
-              ? 'translate-x-0'
-              : 'translate-x-full'
+          className={`fixed top-0 left-0 h-screen w-screen bg-black/40 backdrop-blur-sm z-[100] transition-opacity duration-300 ${
+            mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          onClick={() => setMobileOpen(false)}
+        />
+
+        {/* Mobile Nav Menu */}
+        <div
+          className={`fixed top-0 right-0 h-screen w-[80vw] max-w-sm bg-white shadow-xl z-[120] flex flex-col items-center justify-center transform transition-transform duration-300 ${
+            mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <ul className="flex flex-col gap-8  text-gray-900 font-poppins font-semibold text-xl items-center justify-center h-full">
+          <ul className="flex flex-col gap-8 text-gray-900 font-poppins font-semibold text-xl items-center">
             {navLinks.map((link) => (
               <li
                 key={link}
@@ -66,7 +75,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

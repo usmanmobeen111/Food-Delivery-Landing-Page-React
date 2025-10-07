@@ -3,6 +3,8 @@ import { FaBolt, FaFireAlt, FaGlassWhiskey, FaHamburger, FaLaughBeam, FaPizzaSli
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import Menu from '../components/Menu'
+import Testimonials from '../components/Testimonials'
+import CTA from '../components/CTA'
 
 const Home = () => {
   return (
@@ -10,6 +12,8 @@ const Home = () => {
       <Hero/>
       <Features/>
       <Menu/> 
+      <Testimonials/>
+      <CTA/>
     </div>
   )
 }

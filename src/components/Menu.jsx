@@ -4,25 +4,34 @@ import { FaUtensils } from "react-icons/fa6";
 
 const Menu = () => {
   return (
-    <section className="min-h-screen bg-accent-dark text-neutral px-6 py-16">
+    <section className="min-h-screen px-6 py-16 bg-accent-dark text-neutral">
+      {/* Header */}
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-poppins font-bold text-primary flex items-center justify-center gap-3">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-roboto relative flex items-center justify-center gap-3">
           <FaUtensils className="text-secondary text-5xl" />
-          Our Delicious Menu
+          Our <span className="text-primary">
+            Delicious Menu
+          </span>
         </h2>
-        <p className="text-neutral/80 mt-3 text-lg max-w-2xl mx-auto">
+        <p className="mt-3 text-lg max-w-2xl mx-auto text-neutral/80">
           Savor the flavors crafted with passion and precision. Each dish tells
           a story — one that begins in our kitchen and ends in your heart.
         </p>
       </div>
 
-      {/* Menu Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Menu Cards */}
+      <div className="flex flex-wrap justify-center gap-8">
         {menuItems.map((item, index) => (
           <div
             key={index}
-            className="bg-accent rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:scale-[1.03] transition-all duration-300 group"
+            className="
+              bg-white text-dark rounded-2xl shadow-md overflow-hidden
+              hover:shadow-xl hover:scale-[1.03]
+              transition-all duration-300 group
+              w-[85%] sm:w-[70%] md:w-[45%] lg:w-[25%]
+            "
           >
+            {/* Image */}
             <div className="relative w-full h-56 overflow-hidden">
               <img
                 src={item.img}
@@ -34,11 +43,12 @@ const Menu = () => {
               </span>
             </div>
 
+            {/* Card Content */}
             <div className="p-5 text-left">
               <h3 className="text-xl font-bold text-secondary mb-2 font-poppins">
                 {item.name}
               </h3>
-              <p className="text-neutral/70 text-sm mb-4 leading-relaxed">
+              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                 {item.description}
               </p>
 
