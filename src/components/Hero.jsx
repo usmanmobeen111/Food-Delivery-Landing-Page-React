@@ -14,7 +14,7 @@ const imgVariants = {
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex flex-col md:flex-row justify-center items-center bg-gradient-to-br from-primary/10 via-white to-primary/5 relative overflow-hidden">
+    <div id="home" className="min-h-screen flex flex-col md:flex-row justify-center items-center bg-gradient-to-br from-primary/10 via-white to-primary/5 relative overflow-hidden">
       {/* Decorative Background Circles */}
       <motion.div
         className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-primary/20 rounded-full blur-3xl z-0"
@@ -34,7 +34,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full px-4 mt-[10vh] md:mt-0">
         <motion.h1
-          className="font-roboto text-5xl md:text-7xl font-extrabold text-primary text-center mb-6 drop-shadow-lg"
+          className="mt-10 md:mt-0 font-roboto text-5xl md:text-7xl font-extrabold text-primary text-center mb-6 drop-shadow-lg"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -71,13 +71,13 @@ const Hero = () => {
         transition={{ duration: 1, delay: 0.6 }}
       >
         <img
-          src="/images/hero.jpg"
+          src="/images/hero.png"
           alt="A picture of pizza"
-          className="w-[350px] md:w-[500px] rounded-3xl shadow-2xl object-cover border-4 border-primary/30"
+          className="w-[350px] md:w-[500px]"
         />
         {/* Decorative floating food emoji */}
         <motion.span
-          className="absolute top-10 left-10 text-5xl"
+          className="absolute top-5 -left-10 lg:top-10 lg:left-10 text-5xl lg:text-7xl md:top-10 md:left-10"
           initial={{ opacity: 0, y: -30, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.7, delay: 1 }}
@@ -85,7 +85,7 @@ const Hero = () => {
           🍕
         </motion.span>
         <motion.span
-          className="absolute bottom-10 right-10 text-4xl"
+          className="absolute lg:bottom-10 lg:right-10 text-4xl lg:text-6xl md:bottom-10 md:right-10 bottom-7 -right-7"
           initial={{ opacity: 0, y: 30, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.7, delay: 1.2 }}

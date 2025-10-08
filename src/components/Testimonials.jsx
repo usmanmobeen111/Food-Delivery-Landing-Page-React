@@ -8,13 +8,13 @@ const fadeUp = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
+    transition: { delay: i * 0.15, duration: 0.6 },
   }),
 };
 
 const Testimonials = () => {
   return (
-    <section className="py-20 bg-yellow-50 text-slate-900">
+    <section id="testimonials" className="py-20 bg-yellow-50 text-slate-900">
       {/* Heading */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-roboto">
@@ -33,7 +33,7 @@ const Testimonials = () => {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true}}
             custom={i}
             className="group bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 hover:-translate-y-2"
           >

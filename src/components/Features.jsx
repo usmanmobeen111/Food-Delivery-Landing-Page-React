@@ -75,7 +75,7 @@ const underlineVariants = {
 
 const Features = () => {
   return (
-    <section className="bg-yellow-50 min-h-screen flex flex-col items-center justify-center py-16 px-4">
+    <section id='features' className="bg-yellow-50 min-h-screen flex flex-col items-center justify-center py-16 px-4">
       {/* Heading */}
       <div className="text-center mb-12 relative">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-roboto relative inline-block">

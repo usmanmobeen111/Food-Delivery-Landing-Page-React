@@ -4,7 +4,7 @@ import { FaUtensils } from "react-icons/fa6";
 
 const Menu = () => {
   return (
-    <section className="min-h-screen px-6 py-16 bg-accent-dark text-neutral">
+    <section id="menu" className="min-h-screen px-6 py-16 bg-accent-dark text-neutral">
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-roboto relative flex items-center justify-center gap-3">

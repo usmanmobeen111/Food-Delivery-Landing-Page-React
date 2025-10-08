@@ -4,7 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const CTA = () => {
   return (
-    <section className="relative py-20 px-6 bg-white text-gray-900 text-center overflow-hidden">
+    <section id="cta" className="relative py-20 px-6 bg-white text-gray-900 text-center overflow-hidden">
 
       {/* Content */}
       <motion.div
